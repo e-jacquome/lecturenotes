@@ -1,0 +1,71 @@
+= SWA Überblicksammlung
+:toc:
+
+== REST
+REpresentational State Transfer
+
+* Architekturstil, kein Standard
+* benutzt URI (Universal Ressource Identifier) zur Identifikation von Web-Ressourcen
+* Zugriff auf Daten mit HTTP-Methoden (GET, Post, Put, Delete)
+* Substantive für Ressourcen
+* Datenaustausch Client Server z.b. mit JSON
+* Zustandlose Kommunikation
+
+Bsp:
+/kunden | GET | JSON | Alle Kunden ermitteln
+/kunden{id} | GET | JSON | Einen Kunden zu gegebener ID ermitteln
+/kunden | POST | JSON | Einen neuen Kunden anlegen
+
+== JSON
+Java Script Object Notation
+* Austauschformat für Datensätze, leichtgewichtiger als XML
+    * Geschweifte Klammern für Datensätze
+    * Eckige Klammern für Listen, Arrays, Mengen
+* Darstellung als Schlüssel-Wert-Paar
+* hierarchischer Aufbau
+
+Beispiel eines JSON Datensatzes:
+
+[source, json, linenums] 
+{
+    "id": 4711, //ganze Zahl
+    "nachname": "Alpha",    //String
+    ...
+    "geburtsdatum": "2001-01-31",   //Datum
+    "newsletter": true, //Boolean
+    "interessen": ["S", "L"] //Liste
+}
+
+== Jackson
+
+* Ziel: Konvertierung zwischen Kotlin-Objekten und JSON
+    * Durch Annotationen
+    * Automatisierung der Konvertierung, statt eigener JSON-Parser mit json.org
+* Ausgangssituation:
+    * JSON hat hierarchischer Aufbau d.h. teilweise wie objektorientierte Daten
+    * Datenaustauschformat zwischen IT Systemen
+
+
+
+== Aggregation
+
+* Ist in der objektorientierten Programmierung eine Assotiation zwischen Objekten.
+* Bei einer Aggregation kann das Teil-Objekt ohne das Aggregat-Objekt existieren.
+* Wird in der UML als leere Raute dargestellt.
+
+Bsp: Vorlesung und Student. Ein Student kann auch ohne eine Vorlesung existieren.
+
+== Komposition
+
+* Ist in der objektorientierten Programmierung eine Assotiation zwischen Objekten.
+* Bei der Komposition kann das Teil-Objekt nicht ohne das Kompositions-Objekt existieren.
+* Wird in der UML als ausgefüllte Raute dargestellt.
+
+Bsp: Gebäude und Raum. Ein Raum kann nicht ohne ein Gebäude existieren.
+
+== TODO: Convention over Configuration 
+
+
+    ???
+
+== TODO: Decorator-Pattern

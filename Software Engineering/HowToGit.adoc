@@ -16,14 +16,14 @@
 . Den Befehl `git push -u origin master` eingeben. Dieser Befehl läd das lokale Repo auf Github hoch.
 
 == Git Befehle
-. `git init` - initialisiert ein neues lokales Repository
-. `git add .` - fügt alle Dateien im Ordner der Staging Area hinzu. Ermöglicht einen neuen Commit.
-. `git add DATEINAME` - fügt nur die genannte Datei der Staging Area hinzu.
-. `git add *.js` - fügt alle .js Dateien der Staging Area hinzu. Mit anderen Dateiänderungen ähnlich oder mit Dateinamen etc.
-. `git commit -m "NACHRICHT"` - commited alle aktuell in der Staging Area vorhandenen Dateien. Die Nachricht soll die aktuellen/neusten Änderungen wiederspiegeln.
+* `git init` - initialisiert ein neues lokales Repository
+* `git add .` - fügt alle Dateien im Ordner der Staging Area hinzu. Ermöglicht einen neuen Commit.
+* `git add DATEINAME` - fügt nur die genannte Datei der Staging Area hinzu.
+* `git add *.js` - fügt alle .js Dateien der Staging Area hinzu. Mit anderen Dateiänderungen ähnlich oder mit Dateinamen etc.
+* `git commit -m "NACHRICHT"` - commited alle aktuell in der Staging Area vorhandenen Dateien. Die Nachricht soll die aktuellen/neusten Änderungen wiederspiegeln.
 
-. `git log` - zeigt die letzten commits mit Commit-Nachricht an
-. `git status` - zeigt den aktuellen Projektstatus an, also ob es noch veränderte oder neue Dateien gibt, die nicht committed wurden
-. `git clone LINKZUMREPO` - clont ein Github Repo in den aktuellen lokalen Ordner
+* `git log` - zeigt die letzten commits mit Commit-Nachricht an
+* `git status` - zeigt den aktuellen Projektstatus an, also ob es noch veränderte oder neue Dateien gibt, die nicht committed wurden
+* `git clone LINKZUMREPO` - clont ein Github Repo in den aktuellen lokalen Ordner
 
 

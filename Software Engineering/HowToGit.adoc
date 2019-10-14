@@ -22,3 +22,8 @@
 . `git add *.js` - fügt alle .js Dateien der Staging Area hinzu. Mit anderen Dateiänderungen ähnlich oder mit Dateinamen etc.
 . `git commit -m "NACHRICHT"` - commited alle aktuell in der Staging Area vorhandenen Dateien. Die Nachricht soll die aktuellen/neusten Änderungen wiederspiegeln.
 
+. `git log` - zeigt die letzten commits mit Commit-Nachricht an
+. `git status` - zeigt den aktuellen Projektstatus an, also ob es noch veränderte oder neue Dateien gibt, die nicht committed wurden
+. `git clone LINKZUMREPO` - clont ein Github Repo in den aktuellen lokalen Ordner
+
+

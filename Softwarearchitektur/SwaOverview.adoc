@@ -63,9 +63,23 @@ Bsp: Vorlesung und Student. Ein Student kann auch ohne eine Vorlesung existieren
 
 Bsp: Gebäude und Raum. Ein Raum kann nicht ohne ein Gebäude existieren.
 
+== Funktionale Programmierung
+* Funktionen können Funktionen als Argumente und Rückgabewerte enthalten
+* Higher-order function 
+    * hat Funktionen als Argument oder als Rückgabewert
+    * z.B. forEach(), map() und filter()
+* pure functions
+    * bei gleichen Eingabewerten erhält man stets das gleiche Resultat
+    * z.B. zu einem Betrag und Mehrwertsteuersatz die Mehrwertsteuer berechnen
+* oft 'immutable state'
+
+
+
 == TODO: Convention over Configuration 
 
 
     ???
 
 == TODO: Decorator-Pattern
+
+== TODO: Static

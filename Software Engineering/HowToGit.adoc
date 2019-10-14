@@ -1,0 +1,24 @@
+= Git Basics 101
+:toc:
+
+== Git Repository erstellen 
+. Projektordner erstellen oder in den vorhandenen Ordner wechseln.
+. Powershell (oder Shell deiner Wahl)  in dem Ordner öffnen.
+. Den Befehl `git init` eingeben. Dies erstellt ein neues git repository.
+. Den Befehl `git add .` eingeben um alle vorhandenen Dateien bzw aktuellen Änderungen in die Staging-Area hinzuzufügen.
+. Den Befehl `git commit -m "XXX"` eingeben, wobei XXX die neue commit-message ist, welche die neuen Änderungen beschreibt.
+
+== Git Repository auf Github hochladen
+. Auf der Github Website ein neues Repository erstellen.
+. Nach dem Erstellen muss der Link zu dem Repository kopiert werden. Der Link hat folgende Syntax: `https://github.com/USERNAME/REPONAME.git`.
+. Im Projekt Ordner eine Powershell öffnen und folgenden Befehl eingeben: `git remote add origin https://github.com/USERNAME/REPONAME.git`
+ Der Befehl verknüpft das lokale Github Repo mit dem Repo auf Github.
+. Den Befehl `git push -u origin master` eingeben. Dieser Befehl läd das lokale Repo auf Github hoch.
+
+== Git Befehle
+. `git init` - initialisiert ein neues lokales Repository
+. `git add .` - fügt alle Dateien im Ordner der Staging Area hinzu. Ermöglicht einen neuen Commit.
+. `git add DATEINAME` - fügt nur die genannte Datei der Staging Area hinzu.
+. `git add *.js` - fügt alle .js Dateien der Staging Area hinzu. Mit anderen Dateiänderungen ähnlich oder mit Dateinamen etc.
+. `git commit -m "NACHRICHT"` - commited alle aktuell in der Staging Area vorhandenen Dateien. Die Nachricht soll die aktuellen/neusten Änderungen wiederspiegeln.
+

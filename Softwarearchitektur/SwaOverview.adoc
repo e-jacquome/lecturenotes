@@ -73,6 +73,10 @@ Bsp: Gebäude und Raum. Ein Raum kann nicht ohne ein Gebäude existieren.
     * z.B. zu einem Betrag und Mehrwertsteuersatz die Mehrwertsteuer berechnen
 * oft 'immutable state'
 
+== Datums Bufferflow
+* Daten werden in Unix in Sekunden seit 1.1.1970 gespeichert.
+* Datentyp ist long.
+* Der Overflow wird in 2030 erreicht werden.
 
 
 == TODO: Convention over Configuration 

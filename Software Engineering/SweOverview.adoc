@@ -1,0 +1,23 @@
+= Software Engineering Überblicksammlung
+:toc:
+
+== Datums Bufferflow
+* Daten werden in Unix in Sekunden seit 1.1.1970 gespeichert.
+* Datentyp ist long.
+* Der Overflow wird in 2030 erreicht werden.
+
+== Bestandteile des Login Token
+* Besteht aus 3 Teilen
+* Im Header steht:
+    * Algorithmus Art
+* Im Hauptteil steht:
+    . Ausstelldatum
+    . 
+
+    TODO:
+
+== Reguläre Ausdrücke 
+* Beim Regexschema gibt es z.B. die Argumente 
+    * i steht für case Insensitive
+    * u steht für unicode
+

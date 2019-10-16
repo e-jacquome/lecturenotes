@@ -1,5 +1,8 @@
-= SWA Überblicksammlung
+= Software Architektur Überblicksammlung
 :toc:
+
+WARNING: Es gibt keine If-Anweisungen sondern nur If-Ausdrücke!
+
 
 == REST
 REpresentational State Transfer
@@ -78,11 +81,49 @@ Bsp: Gebäude und Raum. Ein Raum kann nicht ohne ein Gebäude existieren.
 * Datentyp ist long.
 * Der Overflow wird in 2030 erreicht werden.
 
+== Single Expression Function
+* Eine Funktion die nur einen Methoden Aufruf hat. Spart uns die Deklaration einer eigenen Rückgabevariable und einer eigenen Methode.
+
+Bsp:
+[source, kotlin, linenums]
+fun foo(param: Int) = if (param == 1) "one" else "else"
+
+== Ausdruck durch when
+[source, kotlin, linenums]
+val result = when (key) { //switch, case, default bei Swift
+    "nachname" -> findByNachname(value)
+    "email" -> findByEmail(value)
+    else -> findAll()
+}
+
+== Alleinstehende Funktionen
+* Können ohne Onjekt aufgerufen werden.
+* Bsp: 
+    * listOf(b1, b2)
+
+== Data Class in Kotlin
+* Eine Data Class ist eine Klasse deren Hauptzweck ist Daten zu speichern.
+* Der Kompiler generiert automatisch folgende Funktionen:
+    * equals(), hashCode()
+    * toString()
+    * copy()
+* Anforderungen um aus einer Klasse eine Data Class machen zu können sind:
+    . Der Hauptkonstruktor muss mindestens einen Parameter haben,
+    . Alle Kontruktorparameter müssen als val oder var markiert sein,
+    . Data Classes sind nicht abstract, open, sealed oder inner.
+
+
+
+== TODO: Lambda-Ausdrücke in "High Order Functions"
+Bsp Siehe Kotlin Folien Seite 56.
+
+== TODO: Design Patterns 
+https://www.tutorialspoint.com/design_pattern/design_pattern_overview.htm
+
+
+== TODO: Unterschied class vs data class
 
 == TODO: Convention over Configuration 
-
-
-    ???
 
 == TODO: Decorator-Pattern
 

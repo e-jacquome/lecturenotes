@@ -12,12 +12,97 @@
     * Algorithmus Art
 * Im Hauptteil steht:
     . Ausstelldatum
-    . 
-
     TODO:
+
+== Dateien *.d.ts
+https://basarat.gitbooks.io/typescript/docs/types/ambient/d.ts.html
+
+== Nullish Coalescing ??
+* Wenn auf eine Eigenschaft (Property) zugegriffen wird und der Wert `null` oder `undefined` wäre möchte man gelegentlich einen default-Wert zurückgeben.
+* Bisher muss man das mit dem `||`-Operator erledigen.
+* Nun kann man das durch ein `??` umsetzen. 
+
+Bsp mit dem alten || Operator:
+[source, javascript, linenums]
+const response = {
+  settings: {
+    nullValue: null,
+    height: 400,
+    animationDuration: 0,
+    headerText: '',
+    showSplashScreen: false
+  }
+};
+
+const undefinedValue = response.settings.undefinedValue || 'some other default'; // result: 'some other default'
+const nullValue = response.settings.nullValue || 'some other default'; // result: 'some other default'
+
+Beispiel mit dem neuen Nullish Coalescing ??
+[source, javascript, linenums]
+const undefinedValue = response.settings.undefinedValue ?? 'some other default'; // result: 'some other default'
+const nullValue = response.settings.nullValue ?? 'some other default'; // result: 'some other default'
+const headerText = response.settings.headerText ?? 'Hello, world!'; // result: ''
+const animationDuration = response.settings.animationDuration ?? 300; // result: 0
+const showSplashScreen = response.settings.showSplashScreen ?? true; // result: false
+
+Wenn also der Ausdruck auf der linken Seite des ?? zu null oder undefined ausgewetet wird, dann wird die rechte Seite zurückgegeben.
+
+== Mongoose
+
+* Mongoose ist ein Object Document Mapper (ODM). Es erlaubt uns Objekte zu definieren die typisiert sind und mit einem MongoDB dokument verbunden sind.
+Das heißt wir können in TS Objekte typisierte Objekte erstellen, und dann mit Mongoose ein Schema davon erstellen. Mit diesem Schema kann man mit Mongoose ein Modell erstellen. Dieses Modell wird dann auf ein MongoDB Dokument gemappt, man erstellt also eine Mongo Datenbank durch das TypeScript Óbjekt was normal nicht möglich wäre.
+* Des Weiteren kann man mit Mongoose normale MongoDB Funktionen zum validiere, speichern, löschen, und durchsuchen verwenden.
+
 
 == Reguläre Ausdrücke 
 * Beim Regexschema gibt es z.B. die Argumente 
     * i steht für case Insensitive
     * u steht für unicode
 
+== Destructuring
+
+* Erlaubt es Werte aus Arrays, Eigenschaften von Objekten oder Funktionsparametern in eigene Variablen zu speichern.
+* Erlaubt es uns mehrere Werte mit einer Deklaration zuzuweisen.
+
+Beispiel ohne Destructuring:
+[source, javascript, linenums]
+const token = session.token;
+const refreshToken = session.refresh_token;
+
+Beispiel MIT Destructuring:
+[source, javascript, linenums]
+const {
+    token,
+    refresh_token: refreshToken   // Name bei dem Objekt : Name der neuen Variable
+} = session;
+
+Falls der Name der neuen Eigenschaft und der alten nicht übereinstimmt, dann kann man die folgende Schreibweise verwenden:
+
+`Name der Eigenschaft auf der rechten Seite des = : Name der neuen Eigenschaft`
+
+== Shorthand Properties
+* Wenn der Variablen Name gleich dem Objekt Schlüssel ist, dann kann man dies verwenden.
+
+[source, javascript, linenums]
+'Longhand:'
+const x = 1920, y = 1080;
+const obj = { x:x, y:y }
+'Shorthand:'
+const obj = {x, y}
+
+== Arrow Functions
+*
+
+
+== ABGABEN !! 
+REST muss GET, POST (Put). Delete nicht unbedingt notwendig.
+GraphQL muss auch funktionieren.
+Tests müssen existieren min ein paar.
+
+
+
+. Index
+. app
+. verweise auf service
+. modelle
+. importst bzw require (keine basic auth)

@@ -15,6 +15,15 @@
  Der Befehl verknüpft das lokale Github Repo mit dem Repo auf Github.
 . Den Befehl `git push -u origin master` eingeben. Dieser Befehl läd das lokale Repo auf Github hoch.
 
+== Git Repository von Github herunterladen
+. Den Link zu dem Github Repo von Github kopieren.
+. In ein Verzeichnis mit dem Terminal wechseln in dem das Repo gespeichert werden soll.
+. Den Befehl `git clone https://github.com/USERNAME/REPONAME.git` eingeben. Jetzt wird das Repo heruntergeladen.
+
+== Lokales Git Repo aktualisieren.
+* Wenn das lokale Repo nicht mehr den Stand von dem Repo auf Github hat (Github Repo ist aktueller) dann:
+. Mit dem Terminal in das lokale Repo wechseln und den Befehl `git fetch` eingeben. Dies sollte das lokale Repo auf den Stand des Github Repos aktualisieren.
+
 == Git Befehle
 * `git init` - initialisiert ein neues lokales Repository
 * `git add .` - fügt alle Dateien im Ordner der Staging Area hinzu. Ermöglicht einen neuen Commit.

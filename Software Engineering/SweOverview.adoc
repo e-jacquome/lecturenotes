@@ -52,7 +52,7 @@ Wenn also der Ausdruck auf der linken Seite des ?? zu null oder undefined ausgew
 * Mongoose ist ein Object Document Mapper (ODM). Es erlaubt uns Objekte zu definieren die typisiert sind und mit einem MongoDB dokument verbunden sind.
 Das heißt wir können in TS Objekte typisierte Objekte erstellen, und dann mit Mongoose ein Schema davon erstellen. Mit diesem Schema kann man mit Mongoose ein Modell erstellen. Dieses Modell wird dann auf ein MongoDB Dokument gemappt, man erstellt also eine Mongo Datenbank durch das TypeScript Óbjekt was normal nicht möglich wäre.
 * Des Weiteren kann man mit Mongoose normale MongoDB Funktionen zum validiere, speichern, löschen, und durchsuchen verwenden.
-
+* Ein Model ist ein uebersetztes Schema und stellt die CRUD-Operationen fuer die Dokumente bereit, d.h. das Pattern "Active Record" wird realisiert. Name des Models = Name der Collection
 
 == Reguläre Ausdrücke 
 * Beim Regexschema gibt es z.B. die Argumente 

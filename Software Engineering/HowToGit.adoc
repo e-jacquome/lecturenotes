@@ -15,6 +15,10 @@
  Der Befehl verknüpft das lokale Github Repo mit dem Repo auf Github.
 . Den Befehl `git push -u origin master` eingeben. Dieser Befehl läd das lokale Repo auf Github hoch.
 
+== GitHub Repo aktualisieren
+. Erst lokalen Commit machen.
+. Dann `git push -u origin master`. (Davor muss erst die Anleitung davor einmal gemacht werden um das Github Repo zu verknüpfen)
+
 == Git Repository von Github herunterladen
 . Den Link zu dem Github Repo von Github kopieren.
 . In ein Verzeichnis mit dem Terminal wechseln in dem das Repo gespeichert werden soll.

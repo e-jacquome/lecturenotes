@@ -90,9 +90,14 @@ const obj = { x:x, y:y }
 'Shorthand:'
 const obj = {x, y}
 
-== Arrow Functions
-*
+== Active Record Pattern
+* Das Active Record Entwurfsmuster wurde von Martin Fowler im Buch Patterns of Enterprise Application Architecture benannt.
+* Nach diesem Muster stellt ein Objekt Schnittstellen zum Einfügen, Ändern und Löschen bereit.
+* Ein Objekt bezieht sich auf einen Eintrag in der Datenbank, wird ein Objekt geändert, ändert sich dessen Eintrag in der DB. 
+* Active Record ist ein Objekt, das als Adapter (wrapper) zu einer Zeile in einer Datenbanktabelle dient. Er beinhaltet den DBzugriff und Geschäftslogik für die Daten.
 
+== JSON.stringify() 
+* Die JSON.stringify() Methode konvertiert einen JavaScript-Wert in einen JSON-String. Optional werden Werte ersetzt, wenn eine Ersetzungsfunktion angegeben ist. Optional werden nur die angegebenen Eigenschaften einbezogen, wenn ein Ersetzungsarray angegeben ist.
 
 == ABGABEN !! 
 REST muss GET, POST (Put). Delete nicht unbedingt notwendig.

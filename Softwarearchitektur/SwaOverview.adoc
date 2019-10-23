@@ -3,6 +3,12 @@
 
 WARNING: Es gibt keine If-Anweisungen sondern nur If-Ausdrücke!
 
+== Beispiel einrichten!
+. gradle aus dem Ilias runterladen und die Gradle Version ersetzen
+. 0_gradle in einen Ordner deiner Wahl
+. 1_kunde drüber kopieren
+. In dem Ordner `.\gradlew compileKotlin`
+. Dann `.\gradlew test`
 
 == REST
 REpresentational State Transfer
@@ -101,11 +107,20 @@ val result = when (key) { //switch, case, default bei Swift
 * Bsp: 
     * listOf(b1, b2)
     
+== Higher Order Functions
+* Funktionen die Funktionen als Parameter entgegennehmen,
+* oder eine Funktion zurückgeben.
+
+[source, kotlin, linenums]
+service.findById(id)
+    .flatMap { ok().body(it.toMono()) }
+    .filter...
 
 == Data Class in Kotlin
 * Eine Data Class ist eine Klasse deren Hauptzweck ist Daten zu speichern.
 * Der Kompiler generiert automatisch folgende Funktionen:
-    * equals(), hashCode()
+    * equals()
+    * hashCode()
     * toString()
     * copy()
 * Anforderungen um aus einer Klasse eine Data Class machen zu können sind:
@@ -113,16 +128,69 @@ val result = when (key) { //switch, case, default bei Swift
     . Alle Kontruktorparameter müssen als val oder var markiert sein,
     . Data Classes sind nicht abstract, open, sealed oder inner.
 
+== HTTP-Statuscodes
 
+* 1xx (Informational): The request was received, continuing process
+* 2xx (Successful): The request was successfully received, understood and accepted
+* 3xx (Redirection): Further action needs to be taken in order to complete the request
+* 4xx (Client Error): The request contains bad syntax or cannot be fulfilled
+* 5xx (Server Error): The server failed to fulfill an apparently valid request
+
+=== 1xx Informational
+* 100 Continue
+* 101 Switching Protocols
+* 102 Processing
+* 103 Early Hints
+
+=== 2xx Success
+* 200 OK
+* 201 Created
+* 202 Accepted
+* 203 Non Authoritative Information
+* 204 No Content
+
+=== 3xx Redirection
+* 300 Multiple Choices
+* 301 Moved Permanently
+* 302 Found
+* 304 Not Modified
+* 305 Use Proxy
+
+=== 4xx Client Error
+* 400 Bad Request
+* 401 Unauthorized
+* 402 Payment Required
+* 403 Forbidden
+* 404 Not Found
+* 405 Mehtod Not Allowed
+* 406 Not Acceptable
+* 408 Request Timeout
+
+=== 5xx Server Error
+* 500 Internal Server Error
+* 501 Not Implemented
+* 502 Bad Gateway
+* 503 Service Unavailable
+* 504 Gateway Timeout
+
+== Reguläre Ausdrücke
+* [A-Za-z] genau 1 Buchstabe
+* [a-dx-z] genau 1 Buchstabe aus a - d oder x - z
+* [^abc] irgendein Zeichen außer a, b, c
+* [a-z]? max. 1 Kleinbuchstabe
+* [a-z]* bel. viele Kleinbuchstaben (evtl. auch kein)
+* [a-z]+ mind. 1 Kleinbuchstabe
+* [a-z]{5} genau 5 Kleinbuchstaben
+* [a-z]{5,} mind. 5 Kleinbuchstaben
+* [a-z]{3,5} mind. 3, max. 5 Kleinbuchstaben
+* \d{5} genau 5 Ziffern ("digit")
+* \w [A-Za-z0-9_] ("word")
 
 == TODO: Lambda-Ausdrücke in "High Order Functions"
 Bsp Siehe Kotlin Folien Seite 56.
 
 == TODO: Design Patterns 
 https://www.tutorialspoint.com/design_pattern/design_pattern_overview.htm
-
-
-== TODO: Unterschied class vs data class
 
 == TODO: Convention over Configuration 
 

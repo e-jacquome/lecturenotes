@@ -10,6 +10,9 @@
 
 == Git Repository auf Github hochladen
 . Auf der Github Website ein neues Repository erstellen.
+
+WARNING: Für Idioten (primär Bene): Bitte den Haken bei Readme erstellen entfernen! 
+
 . Nach dem Erstellen muss der Link zu dem Repository kopiert werden. Der Link hat folgende Syntax: `https://github.com/USERNAME/REPONAME.git`.
 . Im Projekt Ordner eine Powershell öffnen und folgenden Befehl eingeben: `git remote add origin https://github.com/USERNAME/REPONAME.git`
  Der Befehl verknüpft das lokale Github Repo mit dem Repo auf Github.

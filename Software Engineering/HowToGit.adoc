@@ -30,6 +30,13 @@ WARNING: Für Idioten (primär Bene): Bitte den Haken bei Readme erstellen entfe
 * Wenn das lokale Repo nicht mehr den Stand von dem Repo auf Github hat (Github Repo ist aktueller) dann:
 . Mit dem Terminal in das lokale Repo wechseln und den Befehl `git fetch` eingeben. Dies sollte das lokale Repo auf den Stand des Github Repos aktualisieren.
 
+== Weiteren Branch erstellen
+. Um einen zusätzlichen Branch zu erstellen muss man ein Colaborateur des Repositorys sein.
+. Man muss eine akuelle lokale Kopie des Repos haben.
+. Nun verwendet man den Befehl `git checkout -b BRANCHNAME`.
+. Man sollte nun eine Bestätigunsnachricht haben.
+. Jetzt kann man ganz normal Änderungen vornehmen und diese commiten und pushen. Die Änderungen können später mit dem Hauptbranch gemerged werden.
+
 == Git Befehle
 * `git init` - initialisiert ein neues lokales Repository
 * `git add .` - fügt alle Dateien im Ordner der Staging Area hinzu. Ermöglicht einen neuen Commit.
@@ -40,5 +47,5 @@ WARNING: Für Idioten (primär Bene): Bitte den Haken bei Readme erstellen entfe
 * `git log` - zeigt die letzten commits mit Commit-Nachricht an
 * `git status` - zeigt den aktuellen Projektstatus an, also ob es noch veränderte oder neue Dateien gibt, die nicht committed wurden
 * `git clone LINKZUMREPO` - clont ein Github Repo in den aktuellen lokalen Ordner
-
+* `git checkout -b BRANCHNAME` - erstellt einen neuen Branch für das aktuelle Repo um andere Funktionen zu implementieren oder zu testen
 

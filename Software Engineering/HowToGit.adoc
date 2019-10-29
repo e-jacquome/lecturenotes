@@ -48,4 +48,5 @@ WARNING: Für Idioten (primär Bene): Bitte den Haken bei Readme erstellen entfe
 * `git status` - zeigt den aktuellen Projektstatus an, also ob es noch veränderte oder neue Dateien gibt, die nicht committed wurden
 * `git clone LINKZUMREPO` - clont ein Github Repo in den aktuellen lokalen Ordner
 * `git checkout -b BRANCHNAME` - erstellt einen neuen Branch für das aktuelle Repo um andere Funktionen zu implementieren oder zu testen
+* `git checkout BRANCHNAME` - wechselt zu dem Branch BRANCHNAME
 

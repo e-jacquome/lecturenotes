@@ -82,6 +82,8 @@ Bsp: Gebäude und Raum. Ein Raum kann nicht ohne ein Gebäude existieren.
     * z.B. zu einem Betrag und Mehrwertsteuersatz die Mehrwertsteuer berechnen
 * oft 'immutable state'
 
+
+
 == Datums Bufferflow
 * Daten werden in Unix in Sekunden seit 1.1.1970 gespeichert.
 * Datentyp ist long.
@@ -127,6 +129,11 @@ service.findById(id)
     . Der Hauptkonstruktor muss mindestens einen Parameter haben,
     . Alle Kontruktorparameter müssen als val oder var markiert sein,
     . Data Classes sind nicht abstract, open, sealed oder inner.
+
+== Singleton Objects
+* Ein Singleton ist ein Objekt keine Klasse. Daher kann es keinen Konstruktor besitzen, allerdings
+kann man durch init() code initialisieren. 
+
 
 == HTTP-Statuscodes
 

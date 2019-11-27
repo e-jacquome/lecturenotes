@@ -99,6 +99,29 @@ const obj = {x, y}
 == JSON.stringify() 
 * Die JSON.stringify() Methode konvertiert einen JavaScript-Wert in einen JSON-String. Optional werden Werte ersetzt, wenn eine Ersetzungsfunktion angegeben ist. Optional werden nur die angegebenen Eigenschaften einbezogen, wenn ein Ersetzungsarray angegeben ist.
 
+== Angular
+
+ngPlural: Alles mit ng vorne ist eine Directive von Angular, die die Funktionalität von HTML erweitert.
+
+Directive mit * vorne (z.B. *ngFor): Structural Directive
+-> Formt oder verändert die Komponente an die es angehängt ist durch hinzufürgen, wegnehmen oder ändern des Elements.
+
+{{ buch.name }}: Interpolation -> Rendert den Wert der Property als Text. Template Expression, der erst ausgewertet und dann in String umgewandelt wird.
+
+[title]: Property Binding -> Ermöglicht die Nutzung des Property Werts innerhalb eines Template Ausdrucks.
+z.B.: <a [title]="buch.name + ' Details'"> {{ buch.name }} <a> -> Nutzt als title nicht das String literal, sondern die variable.
+
+(click): Event Binding -> Bindet ein bestimmtes Event (hier das click Event eines Buttons) an ein von uns definiertes Event.
+z.B.: (click)='share()' -> Bei klicken des Buttons (click Event) soll das Event share aufgerufen werden.
+
+MVC Pattern (Model View Controller) in Angular:
+- component = controller/viewmodel
+- template = view
+
+Angular Template:
+- eine gültige HTML Syntax ist auch eine gültige Template Syntax
+- Ausnahme: <script> tags -> aufgrund des Risikos einer XSS Attacke bzw script injection, wird das tag ignoriert und es wird eine Warning in der Console angezeigt
+
 == ABGABEN !! 
 REST muss GET, POST (Put). Delete nicht unbedingt notwendig.
 GraphQL muss auch funktionieren.
